@@ -17,7 +17,7 @@ This repository contains code for interfacing with RTC modules DS1307 and DS3231
 - DS1307 or DS3231 RTC module
 - ATmega328 microcontroller
 - Arduino Uno IDE or VS Code with PlatformIO
-
+  
 ### Installation
 
 1. Clone this repository:

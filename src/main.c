@@ -6,7 +6,7 @@
 #include <util/delay.h>
 
 int main(void)
-{
+{   
   // uint8_t hours, minutes, seconds, isPM;
 
   // Initialize RTC and UART
