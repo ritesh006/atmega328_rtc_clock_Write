@@ -1,62 +1,64 @@
-# Atmega328_RTC_Clock
+# RTC Clock Write
 
-This Arduino project demonstrates how to create a simple clock using an Arduino board without using an RTC (Real-Time Clock) library. Instead, it utilizes the Arduino's internal `millis()` function for timekeeping.
+This repository contains code for interfacing with RTC modules DS1307 and DS3231 using an ATmega328 microcontroller. The code is developed without dependencies on Arduino libraries and includes custom I2C and UART implementations.
 
-## Used lib
-#include <Arduino.h>
-#include <Wire.h>
+## Features
 
-pins SDA => A5
-pins SCL => A4
-     VCC
-     GND
-## Overview
-
-This sketch implements a basic clock that displays the current time on the Serial Monitor. It uses the Arduino `millis()` function to track elapsed time since the sketch started, which allows it to maintain timekeeping functionality without an external RTC module.
+- Write current time and date to DS1307 and DS3231 RTC modules
+- Custom I2C and UART libraries
+- Developed for ATmega328 microcontroller
+- Compatible with Arduino Uno IDE and VS Code with PlatformIO
 
 ## Getting Started
 
 ### Prerequisites
 
-- VS code with platform.io IDE installed on your computer.
+- Arduino Uno board
+- DS1307 or DS3231 RTC module
+- ATmega328 microcontroller
+- Arduino Uno IDE or VS Code with PlatformIO
 
-- Arduino board (e.g., Arduino Uno, Arduino Nano).
+### Installation
 
-- USB cable for connecting Arduino to your computer.
+1. Clone this repository:
+   
+   git clone https://github.com/ritesh006/atmega328_rtc_clock_Write.git
 
-### Installing and Running
+## Usage
 
-1\. **Clone or download the repository to your local machine:**
+1. **Connect the RTC Module:**
+   - Connect the DS1307 or DS3231 RTC module to the Arduino Uno board.
 
-   ```bash
+2. **Open Project:**
+   - Open the `rtc_clock_Write` project in either VS Code with PlatformIO or Arduino IDE.
 
-   git clone https://github.com/ritesh006/Atmega328_RTC_Clock.git
-1.  Open the Arduino IDE.
-2.  Navigate to File -> Open and select the `ArduinoIDE_clock_Withou_RTC_lib.ino` file from the cloned repository.
-3.  Connect your Arduino board to your computer using a USB cable.
-4.  Upload the sketch to your Arduino board (Sketch -> Upload).
-5.  Open the Serial Monitor (Tools -> Serial Monitor). Ensure the baud rate is set to 9600 to view the clock output.
+3. **Upload Code:**
+   - Upload the code to the Arduino Uno board.
 
-Usage
------
+4. **Utilize Libraries:**
+   - Use the custom I2C and UART libraries to write the current time and date to the RTC module.
 
--   The clock starts running as soon as the sketch is uploaded to the Arduino board.
--   The Serial Monitor displays the current time in hours, minutes, and seconds.
--   Time increments every second.
+## Custom I2C Library
 
-Code Explanation
-----------------
+The custom I2C library provides the following functionalities:
 
--   `setup()`: Initializes Serial communication and sets up initial parameters.
--   `loop()`: Continuously updates and displays the current time using the `millis()` function.
--   The sketch calculates hours, minutes, and seconds based on the elapsed time since the sketch started.
+- Initialize I2C communication.
+- Handle start and stop conditions.
+- Read and write data to the RTC module.
 
-Contributing
-------------
+## Custom UART Library
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or create a pull request.
+The custom UART library offers the following capabilities:
 
-License
--------
+- Initialize UART communication.
+- Send and receive data.
+- Facilitate debugging messages.
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Acknowledgements
+
+- Inspiration from various RTC interfacing projects and custom I2C/UART library implementations.
+- Thanks to the open-source community for providing valuable resources and tools.
+
+## Contact
+
+For questions or inquiries, please contact [ritesh.kumar0793@gmail.com](mailto:ritesh.kumar0793@gmail.com).
