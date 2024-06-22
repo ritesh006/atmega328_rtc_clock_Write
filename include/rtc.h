@@ -10,6 +10,6 @@
 
 void RTC_Init(void);
 void RTC_SetTime(uint8_t hours, uint8_t minutes, uint8_t seconds);
-void RTC_GetTime(uint8_t *hours, uint8_t *minutes, uint8_t *seconds, uint8_t *isPM);
+// void RTC_GetTime(uint8_t *hours, uint8_t *minutes, uint8_t *seconds, uint8_t *isPM);
 
 #endif // RTC_H

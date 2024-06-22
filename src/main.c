@@ -7,7 +7,7 @@
 
 int main(void)
 {
-  uint8_t hours, minutes, seconds, isPM;
+  // uint8_t hours, minutes, seconds, isPM;
 
   // Initialize RTC and UART
   RTC_Init();
@@ -20,10 +20,10 @@ int main(void)
   while (1)
   {
     // Read time from RTC
-    RTC_GetTime(&hours, &minutes, &seconds, &isPM);
+    // RTC_GetTime(&hours, &minutes, &seconds, &isPM);
 
     // Display time over UART
-    display_time(hours, minutes, seconds, isPM);
+    // display_time(hours, minutes, seconds, isPM);
 
     // Delay for 1 second
     _delay_ms(1000);
