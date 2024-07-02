@@ -9,7 +9,7 @@
 #define HOUR_REGISTER 0x02
   
 void RTC_Init(void);
-void RTC_SetTime(uint8_t hours, uint8_t minutes, uint8_t seconds);
+void RTC_SetTime(uint8_t hours, uint8_t minutes, uint8_t seconds, const char *str);
 // void RTC_GetTime(uint8_t *hours, uint8_t *minutes, uint8_t *seconds, uint8_t *isPM);
 
 #endif // RTC_H

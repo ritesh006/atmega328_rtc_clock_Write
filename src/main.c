@@ -14,7 +14,9 @@ int main(void)
   uart_init();
 
   // Set initial time on RTC
-  RTC_SetTime(12, 0, 0); // Set initial time to 12:00:00 PM
+  RTC_SetTime(12, 13, 0, ""); // Set initial time to HH:MM:SS PM/AM 
+
+  // you can set pm PM or p or P either it will set to AM
 
   // Main loop
   while (1)
