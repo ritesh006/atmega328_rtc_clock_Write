@@ -1,7 +1,7 @@
 #include "rtc.h"
 #include "i2c.h"
 #include "utils.h"
-
+#include <string.h>
 void RTC_Init(void) {
   I2C_Init(); // Start the communication with RTC
 }
@@ -26,14 +26,3 @@ void RTC_SetTime(uint8_t hours, uint8_t minutes, uint8_t seconds, const char *st
 }
 
 
-// void RTC_GetTime(uint8_t *hours, uint8_t *minutes, uint8_t *seconds, uint8_t *isPM) 
-// {
-//   uint8_t rawHours;
-
-//   *seconds = bcdToDec(I2C_ReadData(RTC_ADDRESS, SEC_REGISTER) & 0x7F);
-//   *minutes = bcdToDec(I2C_ReadData(RTC_ADDRESS, MIN_REGISTER) & 0x7F);
-//   rawHours = I2C_ReadData(RTC_ADDRESS, HOUR_REGISTER);
-
-//   *isPM = (rawHours & (1 << 5)) ? 1 : 0; // Check if it's PM
-//   *hours = bcdToDec(rawHours &0x1F); // Extract and convert hours from BCD to decimal
-// }
